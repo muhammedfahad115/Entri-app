@@ -5,7 +5,7 @@ import LocalNews from '../Components/LocalNews'
 import Weather from '../Components/Weather'
 import UserContext from '../Context/UserContext'
 import LandingPage from '../Pages/LandingPage'
-import LandingPageContent from '../Components/LandingPageContent'
+import LandingPageContent from '../Components/LandingPageContent/LandingPageContent'
 
 function UserRoutes() {
     return (

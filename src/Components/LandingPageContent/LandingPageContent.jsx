@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import weatherImage from '../assets/Images/weatherImage.jpeg';
-import newVideeo from '../assets/Videos/breakingnewsvideo.mp4';
+import weatherImage from '../../assets/Images/weatherImage.jpeg';
+import newVideeo from '../../assets/Videos/breakingnewsvideo.mp4';
 import './LandingpageContent.css'
 import { Link } from 'react-router-dom';
 
