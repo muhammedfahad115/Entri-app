@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import weatherImage from '../assets/Images/weatherImage.jpeg';
 import newVideeo from '../assets/Videos/breakingnewsvideo.mp4';
-import infoIcon from '../assets/Images/infoIcon.gif';
 import './LandingpageContent.css'
 import { Link } from 'react-router-dom';
 
@@ -55,7 +54,7 @@ function LandingPageContent() {
                 </div>
             </div>
             <div className="flex justify-center mb-5">
-                <Link to="/home"><button className="bg-blue-500 text-white p-2 rounded-md active:scale-95">Get Started</button></Link>
+                <Link to="/home/weather"><button className="bg-blue-500 text-white p-2 rounded-md active:scale-95">Get Started</button></Link>
             </div>
         </>
     );

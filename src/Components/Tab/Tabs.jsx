@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Tab.css';
 import { Link } from 'react-router-dom';
 
 const Tab = () => {
   const [activeTab, setActiveTab] = useState(1);
+  console.log(activeTab)
 
   return (
     <div className="w-full  sm:px-6">
