@@ -1,15 +1,14 @@
 import React from 'react'
 import Header from '../Components/Header'
 import { Outlet } from 'react-router-dom'
-import Tabs from '../Components/Tab/Tabs'
 
-function Home() {
+function LandingPage() {
   return (
     <>
-    <Tabs/>
-    <div className='px-6 '><Outlet/></div>
+    <Header/>
+    <div className='px-6'><Outlet/></div>
     </>
   )
 }
 
-export default Home
+export default LandingPage
