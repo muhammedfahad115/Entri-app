@@ -6,9 +6,9 @@ const Tab = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <div className="w-full px-6">
+    <div className="w-full sm:px-6">
       <div className="flex space-x-4 ">
-        <Link to="/">
+        <Link to="/home/weather">
         <div 
           className={`tab cursor-pointer py-2 ${activeTab === 1 ? 'active' : ''}`} 
           onClick={() => setActiveTab(1)}
@@ -16,7 +16,7 @@ const Tab = () => {
           Weather
         </div>
         </Link>
-        <Link to={"/localnews"}>
+        <Link to={"/home/localnews"}>
         <div 
           className={`tab cursor-pointer py-2 ${activeTab === 2 ? 'active' : ''}`} 
           onClick={() => setActiveTab(2)}
