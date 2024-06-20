@@ -25,6 +25,7 @@ function LandingPageContent() {
                         <div className="card-front">
                             <img className="w-full h-full object-cover rounded-md" src={weatherImage} alt="Weather" />
                         </div>
+                        {/* Weather card back */}
                         <div className="card-back border-2 flex justify-center items-center rounded-md">
                             <div className=''>
                             <h2>Weather Details</h2>
@@ -43,6 +44,7 @@ function LandingPageContent() {
                         <div className="card-front">
                             <video className="w-full h-full object-fill rounded-md" autoPlay loop muted src={newVideeo}></video>
                         </div>
+                        {/* News card back */}
                         <div className="card-back border-2 flex justify-center items-center rounded-md">
                             <div className=''>
                             <h2>News Details</h2>

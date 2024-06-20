@@ -6,8 +6,8 @@ const Tab = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <div className="w-full sm:px-6">
-      <div className="flex space-x-4 ">
+    <div className="w-full  sm:px-6">
+      <div className="flex space-x-4 border-b ">
         <Link to="/home/weather">
         <div 
           className={`tab cursor-pointer py-2 ${activeTab === 1 ? 'active' : ''}`} 
