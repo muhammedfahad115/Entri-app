@@ -6,7 +6,7 @@ const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 function Weather() {
     const [weatherData, setWeatherData] = useState(null);
-    const [loading, setLoading] = useState(true); // State to track loading
+    const [loading, setLoading] = useState(true);  // intially the loading is true
 
     useEffect(() => {
         const fetchWeather = async () => {
@@ -16,11 +16,11 @@ function Weather() {
 
                 const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
                 setWeatherData(response.data);
-                setLoading(false); // Set loading to false after data is fetched
+                setLoading(false);  // when the data is fetched, loading is set to false
             } catch (error) {
                 console.error('Error fetching weather data:', error);
-                setLoading(false); // Set loading to false in case of error
-            }
+                setLoading(false);  // if there is an error, loading is set to false
+            } 
         };
 
         fetchWeather();
@@ -37,7 +37,7 @@ function Weather() {
             <div className="p-4 bg-white rounded-lg shadow-md">
                 <h2 className="text-xl font-bold mb-2">Weather Information</h2>
                 {loading ? (
-                    <LoadingSpinner />
+                    <LoadingSpinner />  // if loading is true, show the loading spinner
                 ) : (
                     <div>
                         {weatherData && (
@@ -48,8 +48,8 @@ function Weather() {
                                 <p>Humidity: {weatherData.main.humidity}%</p>
                             </div>
                         )}
-                    </div>
-                )}
+                    </div> 
+                )} 
             </div>
         </>
     );
