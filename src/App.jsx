@@ -1,11 +1,15 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import UserRoutes from './Routes/UserRoutes'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+    <Routes>
+      <Route path='/*' element={<UserRoutes/>}></Route>
+    </Routes>
     </>
   )
 }
