@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
     <Tabs/>
-    <div className='px-6 '><Outlet/></div>
+    <div className='sm:px-6 '><Outlet/></div>
     </>
   )
 }

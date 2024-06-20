@@ -6,7 +6,7 @@ function LandingPage() {
   return (
     <>
     <Header/>
-    <div className='px-6'><Outlet/></div>
+    <div className=' px-1 sm:px-6'><Outlet/></div>
     </>
   )
 }

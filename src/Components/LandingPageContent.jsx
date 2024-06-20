@@ -1,14 +1,10 @@
 import React from 'react'
-
+import weatherImage from '../assets/Images/weatherImage.jpeg'
 function LandingPageContent() {
   return (
-    <div className='px-6 py-3 sm:flex gap-3 '>
-        <div className='w-1/2 p-2 bg-gray-300 '>
-        <div className='flex justify-center'><h1>Weather</h1></div>
-        </div>
-        <div className='w-1/2 p-2 bg-gray-300 '>
-        <div className='flex justify-center'><h1>LocalNews</h1></div>
-        </div>
+    <div className=' sm:px-6 py-3 flex sm:flex-row flex-wrap flex-col justify-center  gap-3 '>
+        <div className=' md:w-[400px] w-[500px] h-[500px]  '><img className='w-[100%]' src={weatherImage}/></div>
+        <div className=' w-[500px] h-[500px]  bg-gray-300'><h1>LocalNews</h1></div>
     </div>
   )
 }
