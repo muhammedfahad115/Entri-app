@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import SearchForm from './SearchForm';
 import NewsCard from './NewsCard';
 
@@ -16,7 +16,11 @@ function LocalNews() {
         <>
             <div>
                 <h2 className="text-2xl font-bold mb-2">News Articles</h2>
-                <SearchForm onSearch={handleSearch} />
+
+                {/* Search form for local news articles  */}
+                <SearchForm onSearch={handleSearch} /> 
+
+                {/* News card for local news articles */}
                 <NewsCard searchQuery={searchQuery} language={language} />
             </div>
         </>

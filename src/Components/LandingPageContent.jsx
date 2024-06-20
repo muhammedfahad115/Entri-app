@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import weatherImage from '../assets/Images/weatherImage.jpeg';
 import newVideeo from '../assets/Videos/breakingnewsvideo.mp4';
 import './LandingpageContent.css'
@@ -7,19 +7,16 @@ import { Link } from 'react-router-dom';
 function LandingPageContent() {
     const [flip, setFlip] = useState('');
 
-    useEffect(() => {
-        console.log(flip)
-    }, [flip])
-
     return (
         <>
            <div className="sm:px-6 py-5 flex sm:flex-row flex-wrap flex-col justify-center gap-5">
                 {/* Weather card */}
                 <div
-                    onMouseEnter={() => setFlip('weather')}
-                    onMouseLeave={() => setFlip('')}
+                    onMouseEnter={() => setFlip('weather')} // onmouseenter is used to flip the card
+                    onMouseLeave={() => setFlip('')} // onmouseleave is used to flip the card back
                     className={`card w-full sm:w-[500px] h-[400px] sm:h-[450px] ${flip === 'weather' ? 'flipweather' : ''}`}
                 >
+                    {/* Weather card inner */}
                     <div className="card-inner">
                         <div className="card-front">
                             <img className="w-full h-full object-cover rounded-md" src={weatherImage} alt="Weather" />
@@ -35,10 +32,11 @@ function LandingPageContent() {
                 </div>
                 {/* News card */}
                 <div
-                    onMouseEnter={() => setFlip('news')}
-                    onMouseLeave={() => setFlip('')}
+                    onMouseEnter={() => setFlip('news')} // onmouseenter is used to flip the card
+                    onMouseLeave={() => setFlip('')} // onmouseleave is used to flip the card back
                     className={`card w-full sm:w-[500px] h-[400px] sm:h-[450px] ${flip === 'news' ? 'flipnews' : ''}`}
                 >
+                    {/* News card inner */}
                     <div className="card-inner">
                         <div className="card-front">
                             <video className="w-full h-full object-fill rounded-md" autoPlay loop muted src={newVideeo}></video>

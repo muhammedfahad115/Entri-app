@@ -1,13 +1,15 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
 function NewsCard({searchQuery, language}) {
     const [newsArticles, setNewsArticles] = useState([])
 
-
+    // fetching news data from the news api using axios
+    
     useEffect(() => {
+       if(searchQuery && language) {
         const fetchNews = async () => {
             try {
                 const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&language=${language}&sortBy=publishedAt&apiKey=${API_KEY}`);
@@ -18,6 +20,7 @@ function NewsCard({searchQuery, language}) {
         };
 
         fetchNews();
+       }
     }, [searchQuery, language]);
   return (
     <>
