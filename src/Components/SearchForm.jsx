@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Context } from '../Context/UserContext';
 
 function SearchForm({ onSearch }) {
-    const [query, setQuery] = useState('');
+    const [query, setQuery] = useState('latest news');
     const [language, setLanguage] = useState('en');
     const { error, setError } = useContext(Context);
 
@@ -27,7 +27,7 @@ function SearchForm({ onSearch }) {
 
     return (
         <>
-            <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-8 sm:gap-4 relative">
+            <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-8 sm:gap-4 relative mt-4">
                 <div className='flex-1'>
                     <input
                         type="text"

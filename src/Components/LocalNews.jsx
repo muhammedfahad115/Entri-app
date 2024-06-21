@@ -3,7 +3,7 @@ import SearchForm from './SearchForm';
 import NewsCard from './NewsCard';
 
 function LocalNews() {
-    const [searchQuery, setSearchQuery] = useState('');
+    const [searchQuery, setSearchQuery] = useState('latest news');
     const [language, setLanguage] = useState('en');
 
     const handleSearch = (query, lang) => {
