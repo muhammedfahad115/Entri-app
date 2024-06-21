@@ -8,6 +8,7 @@ const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 function NewsCard({ searchQuery, language }) {
     const [newsArticles, setNewsArticles] = useState([]);
     const [loading, setLoading] = useState(false);
+    // eslint-disable-next-line no-unused-vars
     const { error, setError } = useContext(Context);
 
     // fetching news data from the news api using axios
@@ -41,7 +42,7 @@ function NewsCard({ searchQuery, language }) {
     return (
         <>
             {loading ? (
-                <LoadingSpinner />
+                <div className=' pt-20 '><LoadingSpinner /></div>
             ) : (
                 <div className="grid grid-cols-1 mt-4 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {newsArticles.map((article, index) => (

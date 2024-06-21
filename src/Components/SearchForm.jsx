@@ -36,7 +36,7 @@ function SearchForm({ onSearch }) {
                         placeholder="Enter search query..."
                         className="p-2 border w-full outline-gray-500 border-gray-300 rounded-md"
                     />
-                    <div className={` top-full -mt-1 p-2 bg-gray-400 text-white font-semibold transition-transform duration-500 ${error ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-full opacity-0'}`}>
+                    <div className={` top-full -mt-1 p-2 bg-gray-400 text-white text-sm sm:text-base font-semibold transition-transform duration-500 ${error ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-[100%] opacity-0'}`}>
                         {error}
                     </div>
                 </div>
